@@ -1,9 +1,12 @@
+// import package design
 import 'package:flutter/material.dart';
 
+// main function run MyApp class
 void main() {
   runApp(const MyApp());
 }
 
+//  class no get value widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -11,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      // theme set
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         fontFamily: "NotoSansThai",
@@ -24,6 +28,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// class of first page
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
@@ -390,7 +395,7 @@ class SecondPage extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.all(4),
                                   child: Image.network(
-                                    "https://i.pinimg.com/videos/thumbnails/originals/91/7a/6f/917a6fcd9bcf809563da549ddc2105b0.0000000.jpg",
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDKq1A0jcxwTCM5BQ9YdSd-oLxD5R-Sw3dtw&s",
                                     width: 180,
                                     height: 180,
                                     fit: BoxFit.cover,
@@ -399,13 +404,32 @@ class SecondPage extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.all(4),
                                   child: Image.network(
-                                    "https://i.pinimg.com/videos/thumbnails/originals/91/7a/6f/917a6fcd9bcf809563da549ddc2105b0.0000000.jpg",
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJvszTadxb4q_H3KLVlNzpHHARPsVo5xSeHw&s",
                                     width: 180,
                                     height: 180,
                                     fit: BoxFit.cover,
                                   ),
                               ),
                             ],
+                          ),
+                        ],
+                      )
+                  ),
+                  SizedBox(height: 340),
+                  Container(
+                    child:
+                      Column(
+                        children: [
+                          ElevatedButton(
+                            onPressed: () => Navigator.pushNamed(context, '/'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.deepPurpleAccent,
+                              fixedSize: Size(300, 20),
+                            ),
+                            child: Text(
+                              'ไปยังหน้าแรก',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       )
